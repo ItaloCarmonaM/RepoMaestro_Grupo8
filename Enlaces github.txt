@@ -1,13 +1,12 @@
-1. Github de Vicente: 
-	1.
-	2.
-	3.
-	4.
-	5.
+1. Github de Vicente: https://github.com/VicenTTe-26/User-Service.git
+	M1.  Microservicio Usuario
+	M10. Microservicio Authenticator
+	M.
+	M.
 
 2. GitHub de Ítalo: https://github.com/ItaloCarmonaM/Fullstack.5Microservicios.git
-	1. Microservicio de catalogo
-	2. Microservicio de review
-	3.
-	4.
-	5.
+	M2. Servicio Catalogo
+	M3. Servicio Inventario
+	M9. Servicio Review
+	M.
+	M.
