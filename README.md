@@ -22,17 +22,17 @@
 ### Dependencias
 | Servicio Origen                      | Servicio Destino                       | Método | Endpoint (GET)               | Datos esperados (DTO)                           |
 | :----------------------------------- | :------------------------------------- | :----- | :--------------------------- | :---------------------------------------------- |
-| **User**                             | **Auth**                               | GET    | `/api/v1/auth/{id}`          | `id, email`                                     |
+| **User**                             | **Auth**                               | GET    | `/api/v1/auth/{id}`          | `id, correo`                                    |
 | **Inventory**                        | **Catalog**                            | GET    | `/api/v1/catalog/{id}`       | `id, titulo`                                    |
 | **Review**                           | **Catalog**                            | GET    | `/api/v1/catalog/{id}`       | `id, titulo, autor`                             |
-| **Review**                           | **User**                               | GET    | `/api/v1/user/{id}`          | `id, firstName, lastName`                       |
+| **Review**                           | **User**                               | GET    | `/api/v1/user/{id}`          | `id, nombreCompleto`                            |
 | **Cart**                             | **Catalog**                            | GET    | `/api/v1/catalog/{id}`       | `id, titulo, precio`                            |
-| **Cart**                             | **Inventory**                          | GET    | `/api/v1/inventory/{prodId}` | `productId, stockQuantity`                      |
-| **Cart**                             | **User**                               | GET    | `/api/v1/user/{id}`          | `id, firstName, lastName`                       |
-| **Order**                            | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, firstName, lastName, address`              |
+| **Cart**                             | **Inventory**                          | GET    | `/api/v1/inventory/{prodId}` | `id, stockQuantity`                             |
+| **Cart**                             | **User**                               | GET    | `/api/v1/user/{id}`          | `id, nombreCompleto`                            |
+| **Order**                            | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, nombreCompleto, direccion`                 |
 | **Order**                            | **Cart**                               | GET    | `/api/v1/cart/{userId}`      | `userId, items[{id, titulo, precio, cantidad}]` |
 | **Payment**                          | **Order**                              | GET    | `/api/v1/orders/{id}`        | `id, totalAmount, userId`                       |
 | **Logistics**                        | **Order**                              | GET    | `/api/v1/orders/{id}`        | `id, items[{titulo, editorial}]`                |
-| **Logistics**                        | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, address, phoneNumber`                      |
-| **Notification**                     | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, email, firstName`                          |
+| **Logistics**                        | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, direccion, numeroTelefono`                 |
+| **Notification**                     | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, correo, nombreCompleto`                    |
 | **Notification**                     | **Order**                              | GET    | `/api/v1/orders/{id}`        | `id, status, orderDate`                         |
