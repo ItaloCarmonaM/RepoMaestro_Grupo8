@@ -7,12 +7,12 @@
 | UserService    	  | 8080   | db_user 	    | CRUD de usuario            |
 | CatalogService	  | 8081   | db_catalog   | CRUD de Libro              |
 | InventoryService 	| 8082   | db_inventory | CRUD de Inventario (stock) |
-| CartService 		  | 8083   | db_    	    | CRUD de [Entidad]          |
-| OrderService		  | 8084   | db_ 	        | CRUD de [Entidad]          |
-| PaymentService 		| 8085   | db_	 	      | CRUD de [Entidad]          |
+| CartService 		  | 8083   | db_cart      | CRUD de Carrito            |
+| OrderService		  | 8084   | db_order     | CRUD de Orden de compra    |
+| PaymentService 		| 8085   | db_	 	      | CRUD de Pago               |
 | LogisticService 	| 8086   | db_ 	        | CRUD de [Entidad]          |
 | CommService		    | 8087   | db_ 	        | CRUD de [Entidad]          |
-| ReviewService 	  | 8088   | db_ 	        | CRUD de Review             |
+| ReviewService 	  | 8088   | db_review 	  | CRUD de Review             |
 | AuthService 		  | 8089   | db_auth     	| CRUD de Auntentificador    |
 
 ### Despliegue Técnico
@@ -28,6 +28,7 @@
 | **Review**                           | **User**                               | GET    | `/api/v1/user/{id}`          | `id, firstName, lastName`                       |
 | **Cart**                             | **Catalog**                            | GET    | `/api/v1/catalog/{id}`       | `id, titulo, precio`                            |
 | **Cart**                             | **Inventory**                          | GET    | `/api/v1/inventory/{prodId}` | `productId, stockQuantity`                      |
+| **Cart**                             | **User**                               | GET    | `/api/v1/user/{id}`          | `id, firstName, lastName`                       |
 | **Order**                            | **User**                               | GET    | `/api/v1/user/{userId}`      | `id, firstName, lastName, address`              |
 | **Order**                            | **Cart**                               | GET    | `/api/v1/cart/{userId}`      | `userId, items[{id, titulo, precio, cantidad}]` |
 | **Payment**                          | **Order**                              | GET    | `/api/v1/orders/{id}`        | `id, totalAmount, userId`                       |
