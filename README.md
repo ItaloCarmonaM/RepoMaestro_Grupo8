@@ -70,3 +70,17 @@ El sistema se encuentra desplegado de forma Mixta, ya que en cada instancia hay 
 **Detalle de reglas de seguridad aplicadas:**
 * **Reglas de Entrada (Inbound):** Se habilitaron los puertos de manera selectiva (`8080` al `8089`) mediante protocolo TCP para permitir la comunicación bidireccional por HTTP entre ambas IPs públicas (comunicaciones Feign Client). Adicionalmente, se configuró acceso restringido al puerto `22` (SSH) solo para IPs autorizadas de desarrollo y administración del servidor.
 * **Reglas de Salida (Outbound):** Configuración *Full Access* (`0.0.0.0/0`) en ambas instancias para permitir la descarga de dependencias Maven, conexión con repositorios remotos de Docker y salida estándar de logs.
+
+### Links de Swagger:
+| Microservicio  	  | Link |
+| :--- 		 	        | :---  |
+| UserService    	  | http://44.196.219.155:8080/doc/swagger-ui/index.html |
+| CatalogService	  | http://3.231.18.119:8081/doc/swagger-ui/index.html |
+| InventoryService 	| http://3.231.18.119:8082/doc/swagger-ui/index.html |
+| CartService 		  | http://3.231.18.119:8083/doc/swagger-ui/index.html |
+| OrderService		  | http://3.231.18.119:8084/doc/swagger-ui/index.html |
+| PaymentService 		| http://44.196.219.155:8085/doc/swagger-ui/index.html |
+| LogisticService 	| http://44.196.219.155:8086/doc/swagger-ui/index.html |
+| CommService		    | http://44.196.219.155:8087/doc/swagger-ui/index.html |
+| ReviewService 	  | http://3.231.18.119:8088/doc/swagger-ui/index.html |
+| AuthService 		  | http://44.196.219.155:8089/doc/swagger-ui/index.html |
